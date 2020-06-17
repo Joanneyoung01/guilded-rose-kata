@@ -14,8 +14,6 @@ class Shop {
     // loop through each of the shop's items
     for (var i = 0; i < this.items.length; i++) {
 
-
-    
       // if the items name is not "Aged Brie" and the items name is not "backstage passes"
       if (this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
 
@@ -36,6 +34,7 @@ class Shop {
       else {
         // if the items quality is less than 50
         if (this.items[i].quality < 50) {
+          
           // the items quality increases by 1
           this.items[i].quality = this.items[i].quality + 1;
 

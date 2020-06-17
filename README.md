@@ -1,3 +1,23 @@
+
+My Approach
+
+The Key part of this brief is\
+`We have recently signed a supplier of conjured items. This requires an update to our system: “Conjured” items degrade in Quality twice as fast as normal items`
+
+Step by step:\
+1. Understand the Update Quality method - How does the method understand what type of item it is, and where is the logic for deducting the quality value each day.
+
+2. Introduce a new feature to this method, update the control flow:
+
+“Conjured” items degrade in Quality twice as fast as normal items
+This means that the quality value must degrade by 2 each day, not by 1.
+
+
+Rules: 
+* Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly.
+* Do not alter the Item class or Items property
+
+
 # Gilded rose tech test
 
 This is a well known kata developed by [Terry Hughes](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/). This is commonly used as a tech test to assess a candidate's ability to read, refactor and extend legacy code. 

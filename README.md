@@ -1,15 +1,16 @@
 
-My Approach
+# Gilded rose tech test
+
+## My Approach ##
 
 The Key part of this brief is\
-`We have recently signed a supplier of conjured items. This requires an update to our system: “Conjured” items degrade in Quality twice as fast as normal items`
+`We have recently signed a supplier of conjured items. This requires an update to our system: “Conjured” items degrade in Quality twice as fast as normal items. Your task is to add the new feature to our system so that we can begin selling a new category of items.`
 
 Step by step:\
 1. Understand the Update Quality method - How does the method understand what type of item it is, and where is the logic for deducting the quality value each day.
 
 2. Introduce a new feature to this method, update the control flow:
-
-“Conjured” items degrade in Quality twice as fast as normal items
+`“Conjured” items degrade in Quality twice as fast as normal items`
 This means that the quality value must degrade by 2 each day, not by 1.
 
 

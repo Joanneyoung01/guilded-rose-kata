@@ -34,7 +34,7 @@ class Shop {
       else {
         // if the items quality is less than 50
         if (this.items[i].quality < 50) {
-          
+
           // the items quality increases by 1
           this.items[i].quality = this.items[i].quality + 1;
 
@@ -108,3 +108,46 @@ class Shop {
     return this.items;
   }
 }
+
+class conjuredItem extends Item {
+  constructor(name, sellIn, quality){
+    super(name, sellIn, quality);
+    this.category = "conjured"
+  }
+
+  // updateQuality() {
+  //   super.updateQuality();
+  //   // for (var i = 0; i < this.items.length; i++) {
+  //   //   this.items[i].quality === this.items[i].quality
+
+      
+  //   // }
+  //   // update normally as the shop method does
+  //   // redo the function call, but keep the sell in the same
+  // }
+}
+
+// var wine = new Item("Wine", 10, 20)
+// var cheddarCheese = new Item("Cheddar Cheese", 10, 20)
+// var ham = new Item("Ham", 10, 20)
+// var originalShop = new Shop([wine, cheddarCheese, ham])
+// originalShop.items
+// originalShop.items[0].name
+// originalShop.updateQuality()
+// originalShop.items[0].quality
+// originalShop.items[1].quality
+// originalShop.items[2].quality
+
+// var magicWine = new conjuredItem("Magic Wine", 10, 20)
+// var magicCheese = new conjuredItem("Magic Cheese", 10, 20)
+// var magicHam = new conjuredItem("Magic Ham", 10, 20)
+// var Shop = new Shop([magicWine, magicCheese, magicHam])
+// conjuredShop.updateQuality()
+// conjuredShop.items.name
+// conjuredShop.items[0].name
+// conjuredShop.updateQuality()
+// conjuredShop.items[0].quality
+// conjuredShop.items[1].quality
+// conjuredShop.items[2].quality
+
+

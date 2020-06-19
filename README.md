@@ -11,7 +11,7 @@ Step by step:\
 
 2. Introduce a new feature to this method, update the control flow:
 `“Conjured” items degrade in Quality twice as fast as normal items`
-This means that the quality value must degrade by 2 each day, not by 1.
+This means that the quality value must degrade by 2 each day, not by 1. How will conjured items be identified compared to other items? The requirement is that the item class cannot be modified. When importing the item into the shop, a flag should be the notifier. 
 
 
 Rules: 

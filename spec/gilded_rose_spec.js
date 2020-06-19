@@ -33,11 +33,50 @@ describe("Gilded Rose", function() {
     });
 
     // test brie cheese
+    it("Aged Brie” actually increases in Quality the older it gets", function(){
+      var agedBrie = new Item("Aged Brie", 20, 10)
+      var shop = new Shop([agedBrie])
+      shop.updateQuality()
+      expect(shop.items[0].quality).toEqual(11)
+    });
 
-    // not Sulfuras, Hand of Ragnaros
+    //Sulfuras, Hand of Ragnaros
+    it("Sulfuras”, being a legendary item, never has to be sold or decreases in Quality", function(){
+      var sulfuras = new Item("Sulfuras, Hand of Ragnaros", 20, 10)
+      var shop = new Shop([sulfuras])
+      shop.updateQuality()
+      expect(shop.items[0].sellIn).toEqual(20)
+      expect(shop.items[0].quality).toEqual(10)
+    });
 
     // Backstage passes
+    it("Sulfuras”, being a legendary item, never has to be sold or decreases in Quality", function(){
+      var backstagePasses = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 0)
+      var shop = new Shop([backstagePasses])
+      shop.updateQuality()
+      expect(shop.items[0].sellIn).toEqual(9)
+      expect(shop.items[0].quality).toEqual(2)
 
+      // sell in date is below 5 days
+      for (let i = 0; i <= 4; i++) {
+        shop.updateQuality()
+      }
+      expect(shop.items[0].sellIn).toEqual(4)
+      expect(shop.items[0].quality).toEqual(13)
+
+      // sell in date is below 3 days
+      for (let i = 0; i <= 2; i++) {
+        shop.updateQuality()
+        console.log(shop.items[0].sellIn)
+      }
+      expect(shop.items[0].sellIn).toEqual(1)
+      expect(shop.items[0].quality).toEqual(22)
+
+      shop.updateQuality()
+      shop.updateQuality()
+      expect(shop.items[0].sellIn).toEqual(-1)
+      expect(shop.items[0].quality).toEqual(0)
+    });
   });
 
   describe("conjured items", function(){

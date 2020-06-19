@@ -20,6 +20,44 @@ class Shop {
   updateQuality() {
     // loop through each of the shop's items
     for (var i = 0; i < this.items.length; i++) {
+      var quality = this.items[i].quality 
+      var sellIn = this.items[i].sellIn
+      var conjuredItem = this.item[i].category === "conjured"
+
+      switch(this.items[i].name) {
+        case 'Aged Brie':
+          // code block
+          break;
+        case 'Backstage passes to a TAFKAL80ETC concert':
+          // code block
+          break;
+        case 'Sulfuras, Hand of Ragnaros':
+          // code block
+          break;
+        default:
+          if (quality < 50 && quality > 0) {
+
+            if (sellIn < 0 ) {
+              sellIn -= 1;
+              quality -= 2;
+            } else {
+              conjuredItem ? sellIn -= 2 : sellIn -= 1;
+              conjuredItem ? sellIn -= 2 : quality -= 1;
+            }
+            
+          }
+        
+
+
+          
+      }
+
+      // switch(this.items[i].category === "conjured") {
+
+      // }
+
+
+
 
       // if the items name is not "Aged Brie" and the items name is not "backstage passes"
       if (this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
@@ -127,6 +165,9 @@ class Shop {
     // return the full shop inventory
     return this.items;
   }
+
+
+  
 }
 
 
